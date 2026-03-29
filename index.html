@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rize® — Drop 001</title>
+  <meta name="description" content="Não é sobre sorte. É sobre postura." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==============================
+       NAVIGATION
+  ============================== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <img src="assets/images/logo-white.png" alt="Rize" class="nav__logo-img" />
+      </a>
+      <div class="nav__actions">
+        <button class="nav__cart-btn" id="cartToggle" aria-label="Abrir carrinho">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="nav__cart-count" id="cartCount">0</span>
+        </button>
+        <button class="nav__menu-btn" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="nav__mobile-menu" id="mobileMenu">
+      <a href="#drop" class="nav__mobile-link">Drop 001</a>
+      <a href="#identity" class="nav__mobile-link">A Marca</a>
+      <a href="#checkout" class="nav__mobile-link">Finalizar</a>
+    </div>
+  </nav>
+
+  <!-- ==============================
+       CART SIDEBAR
+  ============================== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart" id="cartSidebar">
+    <div class="cart__header">
+      <h3 class="cart__title">Seu carrinho</h3>
+      <button class="cart__close" id="cartClose">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart__items" id="cartItems">
+      <p class="cart__empty">Nenhum item adicionado.</p>
+    </div>
+    <div class="cart__footer" id="cartFooter" style="display:none">
+      <div class="cart__total">
+        <span>Total</span>
+        <span id="cartTotal">R$ 0,00</span>
+      </div>
+      <a href="#checkout" class="btn btn--white cart__checkout-btn" id="cartCheckoutBtn">
+        Finalizar pedido
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==============================
+       HERO SECTION
+  ============================== -->
+  <section class="hero" id="hero">
+    <!-- Grain overlay -->
+    <div class="hero__grain"></div>
+
+    <!-- Animated background text -->
+    <div class="hero__bg-text" aria-hidden="true">RIZE</div>
+
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="hero__tag">Drop 001</span>
+        <span class="hero__tag hero__tag--dot">●</span>
+        <span class="hero__tag">Edição Limitada</span>
+      </div>
+
+      <h1 class="hero__headline">
+        <span class="hero__line" data-reveal>Silencioso.</span>
+        <span class="hero__line hero__line--accent" data-reveal>Impossível</span>
+        <span class="hero__line" data-reveal>de ignorar.</span>
+      </h1>
+
+      <p class="hero__sub" data-reveal>
+        Não é sobre provar nada.<br />É sobre quem você já é.
+      </p>
+
+      <div class="hero__ctas" data-reveal>
+        <a href="#drop" class="btn btn--primary">Ver o drop</a>
+        <a href="#identity" class="btn btn--ghost">A marca</a>
+      </div>
+    </div>
+
+    <!-- Hero image -->
+    <div class="hero__visual" data-reveal>
+      <div class="hero__img-wrap">
+        <img src="assets/images/lifestyle.png" alt="Rize Drop 001 — Lifestyle" class="hero__img" />
+        <div class="hero__img-badge">
+          <img src="assets/images/eyes.png" alt="Rize Eyes" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       MARQUEE
+  ============================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>RIZE®</span><span>DROP 001</span><span>EDIÇÃO LIMITADA</span>
+      <span>SEM REPOSIÇÃO</span><span>SE VOCÊ SABE, VOCÊ SABE</span>
+      <span>RIZE®</span><span>DROP 001</span><span>EDIÇÃO LIMITADA</span>
+      <span>SEM REPOSIÇÃO</span><span>SE VOCÊ SABE, VOCÊ SABE</span>
+      <span>RIZE®</span><span>DROP 001</span><span>EDIÇÃO LIMITADA</span>
+      <span>SEM REPOSIÇÃO</span><span>SE VOCÊ SABE, VOCÊ SABE</span>
+    </div>
+  </div>
+
+  <!-- ==============================
+       IDENTITY SECTION
+  ============================== -->
+  <section class="identity" id="identity">
+    <div class="identity__inner">
+      <div class="identity__eyes">
+        <img src="assets/images/eyes.png" alt="" aria-hidden="true" class="identity__eyes-img" />
+      </div>
+
+      <div class="identity__text">
+        <span class="section-label">A marca</span>
+        <h2 class="identity__headline">
+          Você não<br /><em>precisa explicar.</em>
+        </h2>
+        <p class="identity__body">
+          Rize não faz propaganda de ambição.<br />
+          Rize veste quem já tem.
+        </p>
+        <p class="identity__body">
+          Cada peça é feita pra quem constrói em silêncio.<br />
+          Sem precisar de palco.
+        </p>
+        <div class="identity__pills">
+          <span class="pill">Oversized fit</span>
+          <span class="pill">Heavyweight cotton</span>
+          <span class="pill">Crafted in Brasil</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       CAROUSEL / GALLERY
+  ============================== -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__header">
+      <span class="section-label">Lifestyle</span>
+      <h2 class="gallery__headline">Drop 001 — <em>nos seus olhos</em></h2>
+    </div>
+
+    <div class="carousel" id="carousel">
+      <div class="carousel__track" id="carouselTrack">
+        <!-- Cards generated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       SCARCITY BANNER
+  ============================== -->
+  <div class="scarcity">
+    <div class="scarcity__inner">
+      <div class="scarcity__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <p class="scarcity__text">
+        <strong>Drop limitado.</strong> Sem reposição. Quando acabar, acabou.
+      </p>
+    </div>
+  </div>
+
+  <!-- ==============================
+       PRODUCTS / DROP SECTION
+  ============================== -->
+  <section class="drop" id="drop">
+    <div class="drop__inner">
+      <div class="drop__header">
+        <span class="section-label">Drop 001</span>
+        <h2 class="drop__headline">The Eyes Collection</h2>
+        <p class="drop__sub">Você vê. Eles sentem.</p>
+      </div>
+
+      <div class="drop__grid" id="productsGrid">
+        <!-- Cards generated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       CHECKOUT SECTION
+  ============================== -->
+  <section class="checkout" id="checkout">
+    <div class="checkout__inner">
+      <div class="checkout__left">
+        <span class="section-label">Finalizar pedido</span>
+        <h2 class="checkout__headline">Um passo.<br /><em>Seu look.</em></h2>
+        <p class="checkout__sub">
+          Seu pedido vai direto pro nosso WhatsApp.<br />
+          Rápido. Sem complicação.
+        </p>
+
+        <div class="checkout__order-summary" id="checkoutSummary">
+          <p class="checkout__empty-cart">Adicione produtos ao carrinho para continuar.</p>
+        </div>
+      </div>
+
+      <div class="checkout__right">
+        <div class="checkout__form-wrap">
+          <div class="form-group">
+            <label for="nome" class="form-label">Nome completo</label>
+            <input type="text" id="nome" name="nome" class="form-input" placeholder="João Silva" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="telefone" class="form-label">WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" class="form-input" placeholder="(48) 99999-9999" autocomplete="tel" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cep" class="form-label">CEP</label>
+              <input type="text" id="cep" name="cep" class="form-input" placeholder="88000-000" maxlength="9" />
+            </div>
+            <div class="form-group">
+              <label for="cidade" class="form-label">Cidade</label>
+              <input type="text" id="cidade" name="cidade" class="form-input" placeholder="Florianópolis" autocomplete="address-level2" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="estado" class="form-label">Estado</label>
+              <input type="text" id="estado" name="estado" class="form-input form-input--sm" placeholder="SC" maxlength="2" />
+            </div>
+            <div class="form-group form-group--grow">
+              <label for="endereco" class="form-label">Endereço</label>
+              <input type="text" id="endereco" name="endereco" class="form-input" placeholder="Rua, número, bairro" autocomplete="street-address" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tamanho" class="form-label">Tamanho</label>
+            <div class="size-picker" id="sizePicker">
+              <button type="button" class="size-btn" data-size="P">P</button>
+              <button type="button" class="size-btn" data-size="M">M</button>
+              <button type="button" class="size-btn active" data-size="G">G</button>
+              <button type="button" class="size-btn" data-size="GG">GG</button>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn--whatsapp btn--full" id="whatsappBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Finalizar pedido via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       FINAL CTA
+  ============================== -->
+  <section class="cta-final">
+    <div class="cta-final__inner">
+      <div class="cta-final__eyes" aria-hidden="true">
+        <img src="assets/images/eyes.png" alt="" />
+      </div>
+      <h2 class="cta-final__headline">
+        Se você sabe,<br /><em>você sabe.</em>
+      </h2>
+      <a href="#drop" class="btn btn--primary btn--lg">Ver o drop agora</a>
+    </div>
+  </section>
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <img src="assets/images/logo-white.png" alt="Rize" />
+      </div>
+      <p class="footer__copy">
+        © 2025 Rize®. Drop 001 — Edição limitada. Sem reposição.
+      </p>
+      <div class="footer__links">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="footer__link">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
