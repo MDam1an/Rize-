@@ -41,7 +41,7 @@ const CartPageUI = (() => {
     container.innerHTML = items.map(item => `
       <div class="cart-page-item" data-line="${item.lineId}">
         <img
-          src="../${item.image}"
+          src="${item.image}"
           alt="${item.name}"
           class="cart-page-item__img"
         />
@@ -90,7 +90,7 @@ const CartPageUI = (() => {
       summaryEl.innerHTML = items.map(item => `
         <div class="summary-item">
           <img
-            src="../${item.image}"
+            src="${item.image}"
             alt="${item.name}"
             class="summary-item__img"
           />
